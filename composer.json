@@ -1,0 +1,15 @@
+{
+    "name": "js-engineer/mvcframework",
+    "authors": [
+        {
+            "name": "tarik-gadoumi",
+            "email": "tarik.gadoumi@laplateforme.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
