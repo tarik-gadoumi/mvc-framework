@@ -17,8 +17,7 @@ class Application
         self::$app = $this;
         $this->request = new Request();
         $this->response = new Response();
-        $this->router = new Router($this->request,$this->response);
-
+        $this->router = new Router($this->request, $this->response);
     }
 
     public function run()
@@ -26,10 +25,12 @@ class Application
         echo $this->router->resolve();
     }
 
-    public function  getController(){
+    public function  getController()
+    {
         return $this->controller;
     }
-    public function  setController(Controller $controller){
+    public function  setController(Controller $controller)
+    {
         return $this->controller = $controller;
     }
 }
