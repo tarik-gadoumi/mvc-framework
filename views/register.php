@@ -1,5 +1,17 @@
 <h1>Register</h1>
-<form action="" method="post">
+<div class="row">
+   <?php $form = \app\core\form\Form::begin('', "post") ?>;
+   <?php echo $form->field($model, 'firstname') ?>;
+   <?php echo $form->field($model, 'lastname') ?>;
+   <?php echo $form->field($model, 'email') ?>;
+   <?php echo $form->field($model, 'password') ?>;
+   <?php echo $form->field($model, 'repeatPassword') ?>;
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+<?php \app\core\form\Form::end() ?>;
+
+
+<!-- <form action="" method="post">
    <div class="row">
       <div class="col">
          <div class="mb-3">
@@ -30,4 +42,4 @@
          <label class="form-check-label" name='checkout' for="exampleCheck1">Check me out</label>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> -->
