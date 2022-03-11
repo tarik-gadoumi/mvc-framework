@@ -21,6 +21,6 @@ class SiteController extends Controller
     }
     public  function handleSubmit(Request $request)
     {
-        return 'Handlint Submited  Data';
+        return 'Handling Submited  Data';
     }
 }

@@ -4,6 +4,7 @@ namespace app\core\form;
 
 use app\core\Model;
 
+
 class Form
 {
     public  static function begin($action, $method)
@@ -13,7 +14,7 @@ class Form
     }
     public static function end()
     {
-        return '</form>';
+        echo '</form>';
     }
     public static function field(Model $model, $attribute)
     {
