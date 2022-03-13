@@ -1,3 +1,7 @@
+<?php
+
+use app\core\Application; ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -21,9 +25,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
                 </li>
@@ -42,6 +44,12 @@
         </div>
     </nav>
     <div class="container">
+        <?php if (Application::$app->session->getFlash('success')) : ?>
+            <div class="alert alert-success">
+                <?php echo Application::$app->session->getFlash('success') ?>
+            </div>
+        <?php endif; ?>
+
         {{content}}
     </div>
 
